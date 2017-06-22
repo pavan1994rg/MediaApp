@@ -1,0 +1,643 @@
+/* Empty. Add your own CSS if you like */
+
+.platform-ios.has-translucent-status-bar .app-header-bar {
+    padding-top: 20px;
+}
+
+.platform-android.has-translucent-status-bar .app-header-bar  {
+    padding-top: 25px;
+}
+
+
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url('Jennifer Lynne Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: fontacme;
+  src: url('..WWW/fonts/Acme-Regular.ttf') format('ttf');
+}
+
+
+.titre{
+font-family:myFirstFont;
+font-size:15px;
+}
+
+.bar.bar-dark .title {
+    color: #f53c3c;
+}
+
+ button.link { background:none;border:none; }
+
+
+
+
+
+ .video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+}
+
+.video > .video__iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+
+iframe, object, embed {
+  width: 100%;
+  display: block !important;
+}
+
+
+.s.video-container {
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:-10px;
+    left:0;
+    width:100%;
+    height:50%;
+}
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+
+.fixed-header{
+  margin-top:50px;
+  /* 
+   The ionic header bar is 43px in height,
+   put your content below the header bar.
+  */
+}
+.fixed-header1{
+ height:500px;
+  width:100%;
+
+  /* 
+   The ionic header bar is 43px in height,
+   put your content below the header bar.
+  */
+}
+
+.platform-webview.platform-android.platform-cordova .fixed-header{
+  margin-top:50px;
+  /* On iOS, moving a div out of ion-content,
+  I think you need to compensation for the 20px system status bar.
+  so it's 43px+20px=63px. but I'm not so sure, it hasn't been tested.
+  Test it yourself and make modifications if needed.
+  */
+}
+
+.my-video
+{
+  height:500px;
+  width:100%;
+  position:absolute;
+  
+
+  text-align:center;
+  padding:20px;
+}
+
+.ion-content-below-my-video{
+  margin-top:250px!important;
+}
+
+.platform-webview.platform-android.platform-cordova .ion-content-below-my-video{
+  margin-top:250px!important;  /*
+  Same as .fixed-header
+  */
+}
+
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+.img {
+    border-radius: 50%;
+   
+}
+
+
+  .youtube-player {
+        position: relative;
+        padding-bottom: 56.23%;
+        /* Use 75% for 4:3 videos */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin: 5px;
+    }
+    
+    .youtube-player iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background: transparent;
+    }
+    
+    .youtube-player img {
+        bottom: 0;
+        display: block;
+        left: 0;
+        margin: auto;
+        max-width: 100%;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        height: auto;
+        cursor: pointer;
+        -webkit-transition: .4s all;
+        -moz-transition: .4s all;
+        transition: .4s all;
+    }
+    
+    .youtube-player img:hover {
+        -webkit-filter: brightness(75%);
+    }
+    
+    .youtube-player .play {
+        height: 72px;
+        width: 72px;
+        left: 50%;
+        top: 50%;
+        margin-left: -36px;
+        margin-top: -36px;
+        position: absolute;
+        background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+        cursor: pointer;
+    }
+
+
+.wrap {
+  position:relative;
+  width:480px;
+  height:270px;
+  background-image:url(http://placehold.it/480x270);
+}
+
+.wrap:after {
+  content:"";
+  display:block;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:50px;
+  background-color:rgba(0, 0, 0, 0.7);
+  -webkit-clip-path:polygon(0 0, calc(50% - 30px) 0, 50% 50%, calc(50% + 30px) 0, 100% 0, 100% 100%, 0 100%);
+  -moz-clip-path:polygon(0 0, calc(50% - 30px) 0, 50% 50%, calc(50% + 30px) 0, 100% 0, 100% 100%, 0 100%);
+  clip-path:polygon(0 0, calc(50% - 30px) 0, 50% 50%, calc(50% + 30px) 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid #f00;
+}
+
+div.image {
+   width: 480px;
+   height: 325px;
+   background: url(http://i.imgur.com/ux7a7pi.jpg);
+}
+
+div.sawtooth {
+   width: 426px;
+   height: 271px;
+}
+
+.sawtooth {
+   border-style: solid;
+   border-width: 27px;
+   border-image: url(http://i.imgur.com/Usmr9yF.png) 27 round;
+}
+
+
+/*sawtooth*/
+.container1 {
+  width: 100%;
+  height: 200px;
+  background: #222;
+}
+.zigzag {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.zigzag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  -0.5px;
+  width: 100%;
+  height: 10px;
+  background-color:#f0f0f2; 
+}
+
+.container2 {
+  background:#f0f0f2;
+}
+.container2:before {
+  background:
+
+    linear-gradient(
+      45deg, transparent 33.333%,
+      #fff 33.333%, #d4d6d8 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      #fff 33.333%, #d4d6d8 66.667%,
+      transparent 66.667%
+    );
+  background-size: 20px 40px;
+}
+
+
+
+
+.container3 {
+  background: #FFF;
+}
+.container3:before {
+  background:
+    linear-gradient(
+      45deg, transparent 33.333%,
+      #FFF 33.333%, #FFF 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      #FFF 33.333%, #FFF 66.667%,
+      transparent 66.667%
+    );
+  background-size: 20px 40px;
+}
+.container4 {
+  background: #CCC;
+
+}
+.container4:before {
+  background:
+    linear-gradient(
+      45deg, transparent 33.333%,
+      #CCC 33.333%, #CCC 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -45deg, transparent 33.333%,
+      #CCC 33.333%, #CCC 66.667%,
+      transparent 66.667%
+    );
+  background-size: 20px 40px;
+}
+
+/* home page sawtooth */
+.homecontainer1{
+  background:#f0f0f2;
+}
+.homecontainer1:before {
+  background:
+    linear-gradient(
+      90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    );
+  background-size: 40px 20px;
+}
+
+.homezigzag {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.homezigzag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  0px;
+  width: 100%;
+   height: 10px;
+   background-color:#f0f0f2;
+}
+
+.homecontainer2{
+  background:#fff;
+}
+.homecontainer2:before {
+  background:
+    linear-gradient(
+     50deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -50deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    );
+  background-size: 40px 20px;
+}
+
+.homezigzag2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 15px;
+}
+.homezigzag2:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  0px;
+  width: 100%;
+   height:10px;
+   background-color:#f0f0f2;
+}
+
+
+.homecontainer3{
+  background:#f0f0f2;
+}
+.homecontainer3:before {
+  background:
+    linear-gradient(
+      90deg, transparent 33.333%,
+      #000 33.333%, #000 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -90deg, transparent 33.333%,
+      #000 33.333%, #000 66.667%,
+      transparent 66.667%
+    );
+  background-size: 40px 20px;
+}
+
+.homezigzag3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.homezigzag3:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  0px;
+  width: 100%;
+   height: 10px;
+   background-color:#f0f0f2;
+}
+
+.homecontainer4{
+  background:#000;
+}
+.homecontainer4:before {
+  background:
+    linear-gradient(
+      90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    );
+  background-size: 40px 20px;
+}
+
+.homezigzag4 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.homezigzag4:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  0px;
+  width: 100%;
+   height: 10px;
+   background-color:black; 
+}
+
+.homecontainer5{
+  background:#fff;
+}
+.homecontainer5:before {
+  background:
+    linear-gradient(
+      90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    );
+  background-size: 40px 20px;
+}
+
+.homezigzag5 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.homezigzag5:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  0px;
+  width: 100%;
+   height: 10px;
+   background-color:#f0f0f2;
+}
+
+
+.homecontainer6{
+  background:#f0f0f2;
+}
+.homecontainer6:before {
+  background:
+    linear-gradient(
+      90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    ),
+    linear-gradient(
+      -90deg, transparent 33.333%,
+      #fff 33.333%, #fff 66.667%,
+      transparent 66.667%
+    );
+  background-size: 40px 20px;
+}
+
+.homezigzag6 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.homezigzag6:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  0px;
+  width: 100%;
+   height: 10px;
+   background-color:#f0f0f2; 
+}
+
+.mySuperFancyEffect .circle, .mySuperFancyEffect .top-circle {
+    position: absolute;
+
+}
+.circleimage{
+  border-radius: 80%; 
+}
+.layoutzigzag {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.layoutzigzag:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom:  -0.1px;
+  width: 100%;
+  height: 10px;
+}
+
+
+
+.image123 { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h5 { 
+   position: absolute; 
+   top: 120px; 
+  left:25%;
+  right:25%;
+  
+   font-size:12px;
+   background-color:red;
+}
+.roundtext{
+   color:white;
+   font-weight: 500px;
+   padding:3px;
+   
+}
+
+
+.homesubhead1{
+  
+  font-family: 'Alfa Slab One';
+  font-size: 22px;
+  text-align:center;
+  color:#ff284e;
+}
+
+.homesubhead2{
+ margin-top:-15px;
+  font-family: 'fontacme';
+  font-size: 22px;
+  text-align:center;
+}
+
+.hometitle{
+font-family: 'Baloo Thambi';
+ font-size: 15px;
+ text-align:center;
+ color: #491da0;
+ text-decoration: none;
+ text-transform: uppercase;
+}
+
+
+.imageslide{
+  width:600px;
+  height:400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+}
+
+.imageslide .slider-content {
+  position: absolute;
+  width:100%;
+  height:400px;
+  
+}
+
+.animate-enter,.animate-leave {
+  -webkit-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  -moz-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  -ms-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  -o-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+}
+
+.animate-enter {
+  left:100%;
+}
+
+.animate-enter.animate-enter-active {
+  left:0;
+}
+
+.animate-leave {
+  left:0;
+}
+
+.animate-leave.animate-leave-active {
+  margin-left:-100%;
+}
+
+.title-image {
+
+    height: 30px;
+}

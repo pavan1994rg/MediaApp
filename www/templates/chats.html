@@ -1,0 +1,143 @@
+
+<ion-view ng-controller="chats1Ctrl" >
+
+ <label  class=" bar-subheader">
+</label>
+<ion-list class="bar-subheader" ng-show="truesea">
+      <ion-item ng-repeat="place in places">
+        <h2>{{place.name}}</h2>
+      </ion-item>
+    </ion-list>
+
+ 
+<ion-content  delegate-handle="mainScroll" >
+<ion-slide-box   show-pager="true" does-continue="true" pager-click="true" auto-play="true" slide-interval="2000"
+ style=" height:136px;" >
+
+  <ion-slide  ><img class="img-responsive" src="http://www.kannadafilmclub.com/wp-content/uploads/2017/03/kannada-baner1.jpg" ></ion-slide>
+  <ion-slide  ><img  class="img-responsive" src="http://www.kannadafilmclub.com/wp-content/uploads/2017/03/kannada-baner3.jpg"></ion-slide>
+  <ion-slide  ><img  class="img-responsive"  src="http://www.kannadafilmclub.com/wp-content/uploads/2017/02/Banner2.jpg"></ion-slide>
+  <ion-slide  ><img class="img-responsive"  src="http://www.kannadafilmclub.com/wp-content/uploads/2017/02/Banner1.jpg"></ion-slide>
+  
+ 
+  
+
+
+</ion-slide-box>
+<!-- Spinner  -->
+<div><center><ion-spinner ng-show="postshow" icon="android"></ion-spinner></center></div>
+<!-- Spinner ends  -->
+
+<div  ng-show="!postshow" class="homecontainer1 homezigzag">
+  <p  ng-show="!postshow" class="homesubhead1" >Trailers</p>
+  <p  ng-show="!postshow" class="homesubhead2" >&#9830; Latest Trailers &#9830;</p>
+  <div  ng-show="!postshow"  class="col ">
+    <div ng-show="!postshow" ng-repeat="post in recent_others">
+      <a ng-show="!postshow" href=#/app/chatDet/{{post.id}} >
+        <div class="container2 zigzag">
+          <img  ng-show="!postshow" ng-src={{post.thumbnail_images.medium.url}} style=" width:100%" >
+        </div>
+        <p class="hometitle" style="margin-bottom: 25px; margin-top:15px; background-color:#f0f0f2;; word-wrap: break-word;text-align: center">{{post.title}}</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+  <div  ng-show="!postshow" class="homecontainer2 homezigzag2">
+  <p  ng-show="!postshow" class="homesubhead1" >News</p>
+  <p  ng-show="!postshow" class="homesubhead2" >&#9830; News Live &#9830;</p>
+    <div  ng-show="!postshow">
+  <div class="row row-wrap" style="margin: 0 auto; width:85%">
+        <div class=" col col-50" ng-repeat="slide in recent_games" >
+           <a href=#/app/chatDet/{{slide.id}}>
+            <img style="margin-top:10px; width: 100%" class="img-responsive" ng-src={{slide.thumbnail_images.thumbnail.url}} >
+           </a>
+          </div>
+        </div>
+      </div>  
+ </div>
+
+
+<div  ng-show="!postshow" class="homecontainer3 homezigzag3">
+<p  ng-show="!postshow" class="homesubhead1" >New Video Songs</p>
+  <p  ng-show="!postshow" class="homesubhead2" >&#9830; Songs &#9830;</p>
+      <div  ng-show="!postshow"  class="col item-text-wrap" >
+          <div ng-show="!postshow" ng-repeat="post in recent_posts" >
+              <a ng-show="!postshow" href=#/app/chatDet/{{post.id}} >
+                <div class="container2 zigzag">
+                    <img  ng-show="!postshow" ng-src={{post.thumbnail_images.medium.url}} style=" width:100%" >
+                 </div>
+              </a>
+              <p class="hometitle" style=" margin-bottom: 25px;  margin-top:15px;  background-color:#f0f0f2; word-wrap: break-word;text-align: center">{{post.title}}</p>
+          </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+<div  ng-show="!postshow" class="homecontainer4 homezigzag4">
+<p  ng-show="!postshow" class="homesubhead1" >Movies</p>
+  <p  ng-show="!postshow" class="homesubhead2" style="color:#fff;">&#9830; On Demand &#9830;</p>
+
+       <div class="row">
+       <div ng-repeat="slide in recent_lol"  class="image123" style="margin-left:35%;margin-right:35% "  >
+          <center  ><img class="img-circle" style=" margin-bottom:70px;" ng-src={{slide.thumbnail_images.thumbnail.url}} style="width: 100%" ui-sref="app.chatDetail({chatId: slide.id})" ></center>
+         <h5 style="width: 100%; margin-left:-25%;margin-right:35%  " ><center class="roundtext">{{slide.title}}</center></h5>
+      </div>
+     
+    </div>
+
+ 
+</div>
+
+
+
+
+
+
+
+<div  ng-show="!postshow" class="homecontainer5 homezigzag5">
+<p  ng-show="!postshow" class="homesubhead1" >Comedy Punch</p>
+  <p  ng-show="!postshow" class="homesubhead2" >&#9830; Awesome Punches &#9830;</p>
+  <div  ng-show="!postshow" ng-show="!postshow"  class="col item-text-wrap" >
+    <div ng-show="!postshow" ng-repeat="post in recent_short">
+      <a ng-show="!postshow" href=#/app/chatDet/{{post.id}} >
+        <div class="container2 zigzag">
+          <img  ng-show="!postshow" ng-src={{post.thumbnail_images.medium.url}} style=" width:100%" >
+         </div>
+      </a>
+      <p class="hometitle" style=" margin-bottom: 25px;  margin-top:15px; word-wrap: break-word;text-align: center">{{post.title}}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div  ng-show="!postshow" class="homecontainer6 homezigzag6">
+<p  ng-show="!postshow"class="homesubhead1" >Short</p>
+  <p  ng-show="!postshow" class="homesubhead2" >&#9830; Movies &#9830;</p>
+  
+  <div  ng-show="!postshow"  class="col item-text-wrap">
+    <div ng-show="!postshow" ng-repeat="post in recent_exclusive">
+      <a ng-show="!postshow" href=#/app/chatDet/{{post.id}} >
+         <div class="container2 zigzag">
+            <img  ng-show="!postshow" ng-src={{post.thumbnail_images.medium.url}} style=" width:100%" >
+         </div>
+      </a>
+      <p class="hometitle" style=" margin-bottom: 25px; margin-top:15px;  background-color:#f0f0f2; word-wrap: break-word;text-align: center">{{post.title}}</p>
+    </div>
+  </div>
+</div>
+
+
+
+</ion-content>
+</ion-view >

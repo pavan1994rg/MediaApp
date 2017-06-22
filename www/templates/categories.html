@@ -1,0 +1,26 @@
+<ion-view>
+ <label  class=" bar-subheader">
+</label>
+<ion-list class="bar-subheader" ng-show="truesea">
+      <ion-item ng-repeat="place in places">
+        <h2>{{place.name}}</h2>
+      </ion-item>
+    </ion-list>
+<ion-content>
+<div><center><ion-spinner ng-show="!postshow" icon="android"></ion-spinner></center></div>
+ <div ng-show="postshow" class="row row-wrap" style="margin: 0 auto; width:85%">
+         <div class=" col col-50"  ng-repeat="post in recent_cate" >
+    <div >
+      <a  href=#/app/chatDet/{{post.id}} >
+    
+          <img   style="margin-top:10px;width: 100%" ng-src={{post.thumbnail_images.thumbnail.url}}  >
+   
+     
+      </a>
+    </div>
+  </div>
+</div>
+
+<ion-infinite-scroll  on-infinite="loadMore()" distance="10%" ng-if="canLoadMore" immediate-check="false"></ion-infinite-scroll>
+</ion-content>
+</ion-view>

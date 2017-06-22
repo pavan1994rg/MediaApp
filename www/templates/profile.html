@@ -1,0 +1,20 @@
+<ion-view >
+<ion-header-bar class="bar-assertive">
+</ion-header-bar>
+  <ion-content scroll="false" >
+  <button ng-show="!userName" class="button button-icon button-clear button-block  button-assertive" ng-click="login()">Login With Google
+      </button> <br/>
+    <ion-list>
+    <ion-item ng-show="userName" class="item item-thumbnail-left ">
+    <img src="{{userImage}}">
+    <p>{{userName}}</p>
+
+    </ion-item>
+    </ion-list>
+    <button ng-show="userName" class="button button-block button-assertive button-login" ng-click="logout()" >
+       SignOut
+      </button>
+   
+      </ion-list>
+      </div>
+    

@@ -1,0 +1,71 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <!-- Left menu -->
+  
+ 
+
+
+  <ion-side-menu-content>
+
+  <!-- Main content, usually <ion-nav-view> -->
+
+  <ion-nav-bar class="bar-assertive">
+
+
+
+  
+  <ion-nav-buttons side="Left">
+  <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="Right">
+  <button ng-show="!userName" class="button button-icon button-clear ion-person" ng-click="loginUser()"></button>
+  <img ng-show="userName" src={{userImage}} style="width:100%;border-radius: 80%">
+
+
+  </ion-nav-buttons>
+   <ion-nav-title><center><img class="title-image" src="http://icons.iconarchive.com/icons/martz90/hex/256/google-play-music-icon.png"></center></ion-nav-title>
+  </ion-nav-bar>
+  </ion-nav-bar>
+
+
+  <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu >
+
+
+    <ion-content>
+     <img src="http://icons.iconarchive.com/icons/martz90/hex/256/google-play-music-icon.png" style="background-color:grey;width: 100%">
+ <ion-list >
+ 
+ <ion-list >
+<ion-item  menu-toggle="left" ng-show="userName" ng-click="logout()">LogOut</ion-item>
+  <ion-item  menu-toggle="left" ng-if="!userData" ui-sref="app.chats">Home</ion-item>
+
+
+
+
+<div ng-repeat="cate in mainCategories">
+ <ion-item class="item-icon-right ">
+
+<p menu-toggle="left" ng-if="cate.post_count!=0" ui-sref="app.categories({cateId:cate.id})" >{{cate.title}}</p>
+<p menu-toggle="left" ng-if="cate.post_count==0">{{cate.title}}</p> <span ng-if="cate.post_count!=0" class="badge badge-assertive">{{cate.post_count}}</span><i ng-hide="isGroupShown(cate)" ng-if="cate.post_count==0" class="icon ion-plus-round" ng-click="show(cate)"></i>
+  <i ng-show="isGroupShown(cate)" ng-if="cate.post_count==0" class="icon ion-minus-round" ng-click="close(cat)"></i>
+  </ion-item>
+    <ion-item ng-show="isGroupShown(cate)"  ng-repeat="subcat in subcategories" ng-if="subcat.parent==cate.id">
+    <p menu-toggle="left" ui-sref="app.categories({cateId:subcat.id})">{{subcat.title}}</p> <span ng-if="subcat.post_count!=0" class="badge badge-assertive">{{subcat.post_count}}</span>
+
+    </ion-item>
+ </div>
+
+
+ </ion-list>
+</ion-content>
+  </ion-side-menu>
+
+
+
+  <!-- Right menu -->
+  
+
+</ion-side-menus>

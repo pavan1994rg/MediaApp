@@ -1,0 +1,79 @@
+<ion-view cache-view="false" >
+<div class="bar bar-header bar-assertive">
+  <h1 class="title">{{post.category}}</h1>
+</div>
+
+<ion-list  ng-show="truesea" class="video-container fixed-header fixed-header1"  >
+      <ion-item  ng-repeat="place in places" >
+        <h2>{{place.name}}</h2>
+      </ion-item>
+    </ion-list>
+<div id="player" ng-show="video_url" class=" video-container fixed-header my-video"  ><youtube-video video-id="myId"></youtube-video></div>
+
+
+ <ion-slides ng-show="(!video_url)&&imageslide" style="height: 250px; margin-top: 10%" >
+<ion-slide-page ng-repeat="image in imageslide " >
+<img ng-src={{image.images.full.url}} style=" display: block;
+    margin: 0 auto;">
+   
+
+
+</ion-slide-page>
+</ion-slides>
+
+
+
+ <ion-content overflow-scroll="true"  class="ion-content-below-my-video" 
+   >
+
+
+<div><center><ion-spinner ng-show="postshow" icon="android"></ion-spinner></center></div>
+<div ng-show="!postshow" class="card">
+<h4 ng-show="!postshow">{{post_title}}</h4>
+
+<p ng-bind-html="datacon"></p>
+ 
+
+
+ 
+
+
+
+<div >
+
+</div>
+</div>
+
+<div ng-show="!postshow"  class="card" style="background-color: #696969">
+<ion-list ng-show="!postshow"  >
+
+<ion-item  class="item item-text-wrap item-thumbnail-left" ng-show="!postshow"   ng-repeat="post in recent_catposts" ng-if="post.id!=ipost.id"  href=#/app/chatDet/{{post.id}}>
+
+
+<img  ng-show="!postshow"  ng-src={{post.thumbnail}} style="width: 100%">
+
+<h2>{{post.title}}</h2>
+
+    
+
+
+
+
+
+</ion-item>
+
+</ion-list>
+</div>
+
+
+
+
+
+
+
+
+
+
+</ion-content>
+
+</ion-view>
